@@ -1,0 +1,606 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Facebook{
+    width: 100%;
+    height: 100vh;
+    .navbar{
+        position: fixed;
+        z-index: 1;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        /* ==================================== Search-bar ============================== */
+        .Search-bar{
+            /* background-color: orange; */
+            width: 20%;
+            height: 100%;
+            position: relative;
+            z-index: 0;
+            div{
+                display: flex;
+                align-items: center;
+                width: 300px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                z-index: 1;
+                .logo{
+                    cursor: pointer;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-color: blue;
+                    clip-path: circle(50% at 50% 50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+                    h1{
+                        color: white;
+                        font-family: "AKbalthom HighSchool-Frame";
+                    }
+                    
+                }
+                .search{
+                    width: 240px;
+                    height: 40px;
+                    .text{
+                            height: 40px;
+                            min-width: 20px;
+                        position: relative;
+                        input{
+                            display: block;
+                            background-color: rgb(234, 234, 234);
+                            height: 40px;
+                            min-width: 20px;
+                            border-radius: 20px;
+                            margin-right: 20px;
+                            border: none;
+                            font-size: 17px;
+                            padding-left: 50px;
+                        }
+                        i{
+                            position: absolute;
+                            left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        /* ==================================== btn ============================== */
+        .btn{
+            /* background-color: blue; */
+            width: 30%;
+            height: 100%;
+            align-items: center;
+            cursor: pointer;
+            ul{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    font-size: 25px;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+                
+                li:nth-child(1){
+                    border-bottom: 3px solid red; 
+                    a{
+                        color: blue;
+                    }
+                }
+                
+            }
+            ul li:hover {
+                background-color: rgba(195, 195, 195, 0.715);
+                border-radius: 10px; 
+            }
+            .Hotext{
+                display: flex;
+                width: 100%;
+                height: 80%;
+                align-items: center;
+                justify-content: space-around;
+                font-family: sans-serif;
+                font-size: 12px;
+                color: white;
+                h3{
+                    display: none;
+                    background-color: rgb(139, 36, 36);
+                    padding: 10px;
+                    border-radius: 15px;
+                }
+                
+            }
+        }
+        
+        
+        /* ==================================== Message ============================== */
+        .message-btn{
+            /* background-color: yellow; */
+            width: 20%;
+            height: 100%;
+            display: flex;
+            gap: 20px;
+            display: flex;  
+            align-items: center;
+            padding-left: 60px;
+            .btn{
+                width: 40px;
+                height: 40px;
+                background-color: rgb(203, 203, 203);
+                clip-path: circle(50% at 50% 50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+            }
+            .btn:hover{
+                background-color: rgb(189, 187, 187);
+            }
+        }
+    }
+    .content{
+        top: 55px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: auto;   
+        /* ====================================== Left ============================== */
+        .left{
+            width: 20%;
+            height: 90vh;
+            /* background-color: red; */
+            padding-top: 70px;
+            position: relative;
+            cursor: pointer;
+            .btn-profile{
+                position: absolute;
+                top: 70px;
+                width: 100%;
+                height: 90vh;
+                /* background-color: gray; */
+                overflow-y: auto;
+                /* scrollbar-width: none; */
+                
+                .box{
+                    width: 1fr;
+                    height: 55px;
+                    /* background-color: orange; */
+                    margin-bottom: 10px;
+                    border-radius: 10px 0 0 10px;
+                    margin-left: 8px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    gap: 10px;
+                    h2{
+                        font-weight: normal;
+                        font-family: sans-serif;
+                        font-size: 18px;
+                    }
+
+                }
+                .box:nth-child(1),.box:nth-child(6){
+                    .btn{
+                        width: 35px;
+                        height: 35px;
+                        background-color: rgba(219, 219, 219, 0.777);
+                        clip-path: circle(50% at 50% 50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .box:nth-child(1){
+                    .btn{
+                        background-image: url(img-storie/2.png);
+                        background-size: cover;
+                    }
+
+                }
+                .box:hover{
+                    background-color: rgba(171, 168, 168, 0.671);
+                }
+            }
+        }
+        /* ====================================== Center ============================== */
+        .center{
+            /* background-color: rgb(116, 59, 59); */
+            padding-top: 5%;
+            overflow-y: auto;
+            width: 80%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 0.4fr;
+            position: relative;
+            .post-center{
+                background-color: rgb(255, 255, 255);
+                .post{
+                    width: 75%;
+                    height: 110px;   
+                    margin: auto;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+                    .post-text{
+                        width: 100%;
+                        height: 50%;
+                        border-bottom: 1px solid black;
+                        display: grid;
+                        align-items: center;
+                        grid-template-columns: 0.1fr 1fr;
+                        gap: 10px;
+                        .user{ 
+                            clip-path: circle(50% at 50% 50%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 20px;
+                            height: 40px;
+                            width: 40px;
+                            margin-left: 10px;
+                            background-color: rgb(205, 199, 199);
+                            /* position: absolute; */
+                            z-index: 0;
+                            i{
+                                color: black;
+                            }
+                        }
+                        .user:hover{
+                            background-color: rgb(171, 169, 169);
+                            cursor: pointer;
+                        }
+                        
+                        input{
+                            background-color: rgb(213, 213, 213);
+                            height:40px;
+                            border-radius: 20px;
+                            margin-right: 20px;
+                            border: none;
+                            font-size: 17px;
+                            padding-left: 20px;
+                        }
+                        input:hover{
+                            background-color: rgba(226, 221, 221, 0.693);
+                            cursor: pointer;
+                        } 
+                    }
+                    .post-VIL{ 
+                        width: 100%;
+                        height: 50%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        padding: 3px;
+                        .box{
+                            font-family: sans-serif;
+                            border-radius: 10px;
+                            font-weight: normal;
+                            display: flex;
+                            gap: 10px;
+                            font-size: 16px;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer; 
+                        }
+                        .box:nth-child(1):hover,.box:nth-child(2):hover,.box:nth-child(3):hover{
+                            background-color: rgb(203, 198, 198);
+                        }
+                        .box:nth-child(1){
+                            i{
+                                color: rgb(196, 12, 42);
+                            }
+                        }
+                        .box:nth-child(2){
+                            i{
+                                color: rgb(8, 230, 97);
+                            }   
+                        }
+                        .box:nth-child(3){
+                            i{
+                                color: rgb(145, 17, 38);
+                            }
+                        }
+                    }
+                }
+                .stories{
+                        width: 75%;
+                        height: 180px;   
+                        margin: auto;
+                        margin-top: 20px;
+                        border-radius: 10px;
+                        .box-card{
+                            width: 100%; 
+                            height: 100%;
+                            display: flex;
+                            gap: 20px;
+                            overflow: scroll;
+                            scrollbar-width: none;
+                            .card{
+                                background-color: rgb(115, 102, 102);
+                                min-width: 19%; 
+                                border-radius: 10px;
+                                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
+                                position: relative;
+                                h3{
+                                    position: absolute;
+                                    color: white;
+                                    font-weight: normal;
+                                    font-family: sans-serif;
+                                    font-size: 13px;
+                                    left: 12px;
+                                    bottom: 12px;
+                                }
+                                .image{
+                                    background-image: url(image.png);
+                                    border-radius: 10px;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    padding: 5px;
+                                    position: absolute;
+                                }  
+                                .image:hover{
+                                    transform: scale(1.01);
+    
+                                }  
+                                .user{ 
+                                    clip-path: circle(50% at 50% 50%);
+                                    font-size: 20px;
+                                    height: 40px;
+                                    width: 40px;
+                                    background-color: blue;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    left: 5px;
+                                    top: 5px;
+                                    .col{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        clip-path: circle(50% at 50% 50%);  
+                                        background-color: rgb(106, 106, 109);
+                                        width: 85%;
+                                        height: 85%;
+                                        i{
+                                            color: black;
+                                        }
+                                    }
+                                }     
+                            }
+        /* ========================================================================================== */
+                            .card:nth-child(1){
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                .image{
+                                    background-image: url(image.png);
+                                    border-radius: 10px;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    padding: 5px;
+                                }  
+                                .image:hover{
+                                    transform: scale(1.01);
+    
+                                }
+                                .make-a-story{
+                                    height: 50px;
+                                    width: 100%;
+                                    position: absolute;
+                                    background-color: rgb(255, 255, 255);
+                                    bottom: 0;
+                                    border-radius: 0 0 10px 10px;
+                                    display: flex;
+                                    justify-content: center;
+                                    .add{
+                                        top: -20px;
+                                        position: absolute;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background-color: rgb(255, 255, 255);
+                                        width: 35px;
+                                        height: 35px;
+                                        clip-path: circle(50% at 50% 50%);
+                                        .btn-blus{
+                                            display: flex;
+                                            justify-content: center;
+                                            background-color: blue;
+                                            width: 26px;
+                                            height: 26px;
+                                            clip-path: circle(50% at 50% 50%);
+                                            i{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-self: center;
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                    h3{
+                                        font-weight: normal;
+                                        font-family: sans-serif;
+                                        font-size: 15px;
+                                        color: rgb(34, 34, 34);
+                                        position: absolute;
+                                        bottom: 5px;
+                                    }
+                                }
+                            } 
+        /* ============================================== image of storie ========================================================= */
+                            .card:nth-child(2){ 
+                                .image{
+                                    background-image: url(img-storie/1.png); 
+                                }
+                            }
+                            .card:nth-child(3){ 
+                                .image{
+                                    background-image: url(img-storie/2.png); 
+                                }
+                            }
+                            .card:nth-child(4){ 
+                                .image{
+                                    background-image: url(img-storie/3.png); 
+                                }
+                            }
+                            .card:nth-child(5){ 
+                                .image{
+                                    background-image: url(img-storie/4.png); 
+                                }
+                            }
+                            .card:nth-child(6){ 
+                                .image{
+                                    background-image: url(img-storie/5.png); 
+                                }
+                            }
+                            .card:nth-child(7){ 
+                                .image{
+                                    background-image: url(img-storie/6.png); 
+                                }
+                            }
+                            .card:nth-child(8){ 
+                                .image{
+                                    background-image: url(img-storie/7.png); 
+                                }
+                            }
+                            .card:nth-child(9){ 
+                                .image{
+                                    background-image: url(img-storie/4.png); 
+                                }
+                            }
+                            .card:nth-child(10){ 
+                                .image{
+                                    background-image: url(img-storie/2.png); 
+                                }
+                            }
+                    }
+                }
+                .section-1{
+                    width: 75%;
+                    height: 500px;
+                    margin: auto;
+                    background-color: gray;
+                    margin-top: 20px;
+                    border-radius: 7px;
+                }
+            }
+            .right{
+                /* background-color: rgb(9, 121, 115); */
+                position: sticky;
+                top: 0px;
+                /* padding-top: 70px; */
+                height: 100vh;
+                overflow: auto;
+                .birthday{
+                    width: 100%;
+                    height: 300px;
+                    background-color: rgb(176, 181, 176);
+                }
+                .bar-text{
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    padding: 0 20px;
+                    align-items: center;
+                    justify-content: space-between;
+                    ul:nth-child(1){
+                        width: 40px;
+                        li{
+                            list-style: none;
+                            a{
+                                text-decoration: none;
+                                font-family: sans-serif;
+                                font-size: 18px;
+                                color: black;
+                            }
+                        }
+                    }
+                    ul:nth-child(2){
+                        display: flex;
+                        gap: 10px;
+                        li{
+                            list-style: none;
+                            width: 30px;
+                            height: 30px;
+                            clip-path: circle(50% at 50% 50%);  
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            a{
+                                text-decoration: none;
+                                font-family: sans-serif;
+                                font-size: 18px;
+                                color: black;
+                            }
+                        }
+                        li:hover{
+                            background-color: rgb(209, 209, 209);
+                        }
+                    }
+                }
+                .chat-box{
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    cursor: pointer;
+                    .user-friend{
+                        background-color: blue;
+                        clip-path: circle(50% at 50% 50%);
+                        width: 37px;
+                        height: 37px;
+                        background-image: url(image-user-friend/1.png);
+                        background-size: cover;
+                    }
+                    .user-name{
+                        font-family: sans-serif;
+                        margin-left: 10px;
+                    }
+                }
+                .chat-box:nth-child(4) .user-friend {
+                    background-image: url(image-user-friend/2.png);
+                }
+                .chat-box:nth-child(5) .user-friend {
+                    background-image: url(image-user-friend/3.png);
+                }
+                .chat-box:nth-child(6) .user-friend {
+                    background-image: url(image-user-friend/4.png);
+                }
+                .chat-box:nth-child(7) .user-friend {
+                    background-image: url(image-user-friend/5.png);
+                }
+                .chat-box:nth-child(8) .user-friend {
+                    background-image: url(image-user-friend/6.png);
+                }
+                .chat-box:hover{
+                    background-color: rgb(222, 222, 222);
+                }
+            }
+        }
+        /* ====================================== Right ============================== */
+        
+    }
+}
